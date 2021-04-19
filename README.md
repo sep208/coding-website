@@ -7,3 +7,7 @@ The languages we are including are:
 * C
 * C++
 * HTML/CSS
+* Swift
+* Go
+* C#
+* PHP
