@@ -9,6 +9,13 @@ def home():
         # Handle POST Request here
         return render_template('index.html')
     return render_template('index.html')
+@app.route('/index.html',methods=['GET','POST'])
+def home2():
+    if request.method=='POST':
+        # Handle POST Request here
+        return render_template('index.html')
+    return render_template('index.html')
+
 
 @app.route("/signup.html", methods=["GET", "POST"])
 def signin():
