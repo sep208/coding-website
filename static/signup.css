@@ -2,11 +2,6 @@
 body{
     background-color:lightblue;
 }
-
-form > input {
-    margin: 12px;
-}
-
 .form-container{
     margin: auto;
     margin-top:50px;
