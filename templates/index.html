@@ -4,39 +4,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Placeholder</title>
-        <link rel="stylesheet" href="../static/header.css">
         <link rel="stylesheet" href="../static/index.css">
-        
+        <link rel="stylesheet" href="../static/header.css">
     </head>
     <body>
         
         
-        <header class="top-bar header">
-            <a href="index.html"> <img id="header-logo" src="../images/logo-no-bg.png"></a>
-            <div class="header-options">
-    
-                <div class="header-main-options small languages-head"><span class="header-options-span small-header-span">Langauges</span>
-                <a href="language-files/python.html" class="language-options">Python</a>
-                <a href="language-files/java.html" class="language-options">Java</a>
-                <a href="language-files/js.html" class="language-options">JavaScript</a>
-                <a href="language-files/ruby.html" class="language-options">Ruby</a>
-                <a href="language-files/c.html" class="language-options">C</a>
-                <a href="language-files/c++.html" class="language-options">C++</a>
-                <a href="language-files/html-css.html" class="language-options">HTML/CSS</a>
-                <a href="language-files/swift.html" class="language-options">Swift</a>
-                <a href="language-files/go.html" class="language-options">Go</a>
-                <a href="language-files/c#.html" class="language-options">C#</a>
-                <a href="language-files/php.html" class="language-options">PHP</a>
-                </div>
-                <div class="header-main-options small about"><span class="header-options-span about small-header-span">About</span></div>
-                
-            </div>
-        </header>
+<header class="top-bar header">
+    <a href="index.html"> <img id="header-logo" src="../static/logo-no-bg.png"></a>
+    <div class="header-options">
+        <div class="header-main-options small languages-head"><span class="header-options-span small-header-span">Langauges</span>
+        <a href="{{ url_for('static', filename='language-files/python.html') }}" class="language-options">Python</a>
+        <a href="{{ url_for('static', filename='language-files/java.html') }}" class="language-options">Java</a>
+        <a href="{{ url_for('static', filename='language-files/js.html') }}" class="language-options">JavaScript</a>
+        <a href="{{ url_for('static', filename='language-files/ruby.html') }}" class="language-options">Ruby</a>
+        <a href="{{ url_for('static', filename='language-files/c.html') }}" class="language-options">C</a>
+        <a href="{{ url_for('static', filename='language-files/c++.html') }}" class="language-options">C++</a>
+        <a href="{{ url_for('static', filename='language-files/html-css.html') }}" class="language-options">HTML/CSS</a>
+        <a href="{{ url_for('static', filename='language-files/swift.html') }}" class="language-options">Swift</a>
+        <a href="{{ url_for('static', filename='language-files/go.html') }}" class="language-options">Go</a>
+        <a href="{{ url_for('static', filename='language-files/c#.html') }}" class="language-options">C#</a>
+        <a href="{{ url_for('static', filename='language-files/php.html') }}" class="language-options">PHP</a>
+        </div>
+        <div class="header-main-options small about"><span class="header-options-span about small-header-span">About</span></div>
+    </div>
+</header>
 
         <div class="top">
             <h1 id="title">The History of Programming</h1><div class='under-head-description-narrow'>
             <p class="under-head-description">A complete history of coding and coding languages</p></div>
             <a href=""><div class="main-sign sign-in"><span class="button-text">Log in</span></div></a><br><span id="or">or</span>
-<br>            <a href="signup.html"><div class="main-sign sign-up"><span class="button-text">Create an account</span></div></a>
+<br>            <a href="{{ url_for('signup') }}"><div class="main-sign sign-up"><span class="button-text">Create an account</span></div></a>
         </div>
-    </body></html>
+    

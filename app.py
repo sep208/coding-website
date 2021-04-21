@@ -1,5 +1,6 @@
 import random
-from flask import Flask, redirect, url_for, render_template, request, flash
+
+from flask import Flask, redirect, url_for, render_template, request
 
 from db import get_db
 from users_db import create_users_table
@@ -18,20 +19,6 @@ def home():
         pass
     return render_template('index.html')
 
-@app.route('/index.html', methods=['GET','POST'])
-def home2():
-    if request.method=='POST':
-        # not sure what POST will be on home route
-        pass
-    return render_template('index.html')
-
-@app.route('/users.html', methods=['GET','POST'])
-def user():
-    if request.method=='POST':
-        # not sure what POST will be on home route
-        pass
-    return render_template('users.html')
-
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -41,13 +28,9 @@ def signup():
         password = request.form["password"]
 
         signup_user(username, email, password)   
-        return redirect(url_for("user")) 
+        return redirect(url_for("home")) 
 
     return render_template("signup.html")
 
-
-if __name__ == "__main__":  # Makes sure this is the main process
-	app.run()
-
-
-
+if __name__ == "__main__":
+    app.run()
