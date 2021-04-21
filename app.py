@@ -1,5 +1,4 @@
 import random
-import os
 from flask import Flask, redirect, url_for, render_template, request
 
 from db import get_db
@@ -14,6 +13,13 @@ with app.app_context():
 
 @app.route('/', methods=['GET','POST'])
 def home():
+    if request.method=='POST':
+        # not sure what POST will be on home route
+        pass
+    return render_template('index.html')
+
+@app.route('/index.html', methods=['GET','POST'])
+def home2():
     if request.method=='POST':
         # not sure what POST will be on home route
         pass
@@ -34,7 +40,4 @@ def signup():
 
 
 if __name__ == "__main__":  # Makes sure this is the main process
-	app.run( # Starts the site
-		host='0.0.0.0',  # EStablishes the host, required for repl to detect the site
-		port=random.randint(2000, 9000)  # Randomly select the port the machine hosts on.
-	)
+	app.run()
