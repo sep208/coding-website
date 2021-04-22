@@ -19,6 +19,12 @@ def home():
         pass
     return render_template('index.html')
 
+@app.route('/users.html', methods=['GET','POST'])
+def users():
+    if request.method=='POST':
+        # not sure what POST will be on home route
+        pass
+    return render_template('users.html')
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -28,7 +34,7 @@ def signup():
         password = request.form["password"]
 
         signup_user(username, email, password)   
-        return redirect(url_for("home")) 
+        return redirect(url_for("users")) 
 
     return render_template("signup.html")
 
