@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@600&family=Noto+Sans:ital@1&family=Poppins:wght@300&display=swap');
 
 body{
-    background-image: url(../static/blue-bg.png);
+    background-image: url(../images/blue-bg.png);
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -28,8 +28,15 @@ span{
 }
 .language-options{
     display: none;
-    padding: 50px;
+    padding: 5px;
+    margin: 5px;
+    color:blue;
     font-family: "Poppins", sans-serif;
+    background-color:lightblue;
+    text-decoration: none;
+}
+.language-options:hover{
+    background:lightgrey;
 }
 .header-main-options{
     display: inline-block;
@@ -44,5 +51,15 @@ span{
     top: 37px;
 }
 .about{
-    position: relative;
-    left: 13px;}
+    position: absolute;
+    left: 60px;
+}
+/*.header-sign-in{
+    position: absolute;
+    color: white;
+    background: green;
+    left:700px;
+    width: 100px;
+    height: 75px;
+    top: 1px;
+}*/
