@@ -18,6 +18,13 @@ def home():
         # not sure what POST will be on home route
         pass
     return render_template('index.html')
+@app.route('/index.html', methods=['GET','POST'])
+def home2():
+    if request.method=='POST':
+        # not sure what POST will be on home route
+        pass
+    return render_template('index.html')
+
 
 @app.route('/users.html', methods=['GET','POST'])
 def users():
